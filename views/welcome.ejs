@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome page</title>
+   <style>
+    li{
+        list-style: none;
+        background-color: brown;
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+   </style>
+</head>
+<body>
+    <h1>number  of productes : <%= productes.length %></h1>
+    <ul>
+        <h2>liste of products</h2>
+        <% productes.forEach(producte => { %>
+            <li >
+                id :<%= producte.id %>
+                name :<%= producte.name %>
+                price :<%= producte.price %>
+            </li>
+        <%  }); %>
+    </ul>
+</body>
+</html>
